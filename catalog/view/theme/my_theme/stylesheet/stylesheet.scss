@@ -3,8 +3,65 @@
 @import "fonts";
 
 //Custom styles here
-body {
+body.common-home {
 
 }
+header {
+  background-color: $main-color;
+  .col-sm-4 {
+    li {
+      color: #0e06ac !important;
+      display: inline-block;
+      list-style: none;
+      float: right;
+      padding-left: 10%;
+      margin-top: 18px;
+      font-size: 1.6rem;
+
+      a {
+        text-decoration: none;
+        list-style: none;
+      }
+    }
+  }
+  #search {
+
+    input {
+      background-color: #deddf7;
+      height: 37px;
+      margin-top: 15px;
+    }
+    .input-group-btn {
+      button {
+        background-color: #deddf7;
+        height: 37px;
+        margin-top: 15px;
+        .fa {
+          position: relative;
+          top: -6px;
+          color: $main-color;
+        }
+      }
+    }
+  }
+}
+
+nav#top {
+  background-color: $main-color-darken;
+  .col-sm-9 {
+    ul.list-unstyled {
+      li {
+        display: inline-block;
+
+        a {
+          list-style: none;
+          text-decoration: none;
+          color: whitesmoke;
+        }
+      }
+    }
+  }
+}
+
 
 @import "media";
