@@ -92,6 +92,15 @@ nav#top {
     }
   }
 }
+.owl-wrapper-outer {
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+.owl-prev,
+.owl-next {
+  color: #01a0e4;
+}
 
 
 @import "media";
