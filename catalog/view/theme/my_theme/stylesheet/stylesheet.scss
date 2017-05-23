@@ -10,32 +10,45 @@ header {
   background-color: $main-color;
   .col-sm-4 {
     li {
-      color: #0e06ac !important;
       display: inline-block;
       list-style: none;
       float: right;
       padding-left: 10%;
-      margin-top: 18px;
+      margin-top: 7px;
       font-size: 1.6rem;
-
       a {
         text-decoration: none;
         list-style: none;
+        color: #0e06ac !important;
       }
+    }
+    .dropdown-menu {
+     >li {
+       a {
+         padding-left: 10px;
+       }
+     }
     }
   }
   #search {
-
     input {
       background-color: #deddf7;
-      height: 37px;
-      margin-top: 15px;
+      height: 34px;
+      margin-top: 5px;
+      color: whitesmoke;
+      &::placeholder {
+        font-size: 1.5rem;
+      }
+      &:focus {
+        background-color: #c9c7fd;
+      }
     }
     .input-group-btn {
       button {
         background-color: #deddf7;
-        height: 37px;
-        margin-top: 15px;
+        height: 34px;
+        margin-top: 5px;
+        border: 1px solid #b6b3eb;
         .fa {
           position: relative;
           top: -6px;
@@ -45,20 +58,37 @@ header {
     }
   }
 }
-
 nav#top {
   background-color: $main-color-darken;
   .col-sm-9 {
-    ul.list-unstyled {
+    ul.nav {
+      margin-top: 14px;
       li {
-        display: inline-block;
-
+        .active {
+          background-color: #5674b9 !important;
+          border-radius: 6px;
+        }
         a {
           list-style: none;
           text-decoration: none;
           color: whitesmoke;
+          transition: all .3s;
+          &:hover {
+            background-color: #5674b9 !important;
+            border-radius: 6px;
+          }
         }
       }
+    }
+  }
+  .col-sm-3 {
+    button {
+      background-color: #0e06ac;
+      color: $main-color;
+      font-size: 1.5rem;
+      width: 70%;
+      float: right;
+      margin-top: 18px;
     }
   }
 }

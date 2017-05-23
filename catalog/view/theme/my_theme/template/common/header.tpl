@@ -20,6 +20,7 @@
 <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
 <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
 <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="catalog/view/theme/my_theme/js/theme.js" type="text/javascript"></script>
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
 <link href="catalog/view/theme/my_theme/stylesheet/css/stylesheet.css" rel="stylesheet">
@@ -76,16 +77,25 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-9">
-            <?php if ($informations) { ?>
-              <ul class="list-unstyled">
-                <?php foreach ($informations as $information) { ?>
-                <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
-                <?php } ?>
-              </ul>
-        <?php } ?>
-      </div>
-      <div class="col-sm-3"><?php echo $cart; ?></div>
-    </div>
+        <nav id="menu" class="navbar">
+          <div class="navbar-header"><span id="category" class="visible-xs"><?php echo $text_category; ?></span>
+            <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+          </div>
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+              <?php if ($informations) { ?>
+               <ul class="nav navbar-nav">
+                  <?php foreach ($informations as $information) { ?>
+                  <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
+                  <?php } ?>
+                 <li><a href="/kategory-skidki">Скидки</a></li>
+                 <li><a href="<?php echo $contact; ?>">Контакты</a></li>
+               </ul>
+            </div>
+          <?php } ?>
+          </div>
+          <div class="col-sm-3"><?php echo $cart; ?></div>
+          </div>
+        </nav>
   </div>
 </nav>
 
