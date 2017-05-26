@@ -20,7 +20,7 @@ $(document).ready(function(){
   //добавление элемента "акция" к айтему товара
   $('.product-layout > .product-thumb').each(function () {
     if($(this).find('.price-old').length > 0) {
-      $(this).find('.image').prepend('<div class="stock">SALE</div>');
+      $(this).find('.ribbon').prepend('<span class="stock">SALE</span>');
     } else return;
   })
 });
