@@ -106,6 +106,16 @@
 										</div>
 									</div>
 
+									<div class="form-group">
+										<label class="col-sm-2 control-label" for="input-icon_warranty"><?php echo $custom_icon; ?></label>
+										<div class="col-sm-10">
+											<input type="text" name="icon_warranty_right" value="<?php echo $icon_warranty_right; ?>" placeholder="<?php echo $custom_icon; ?>" id="input-icon_warranty_right" class="form-control" />
+											<?php if ($error_icon_warranty_right) { ?>
+											<div class="text-danger"><?php echo $error_icon_warranty_right; ?></div>
+											<?php } ?>
+										</div>
+									</div>
+
 								</div>
 
 								<div class="tab-pane" id="tab-vantage-2">
@@ -126,6 +136,16 @@
 											<input type="text" name="icon_service" value="<?php echo $icon_service; ?>" placeholder="<?php echo $custom_icon; ?>" id="input-icon_service" class="form-control" />
 											<?php if ($error_icon_service) { ?>
 											<div class="text-danger"><?php echo $error_icon_service; ?></div>
+											<?php } ?>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label" for="input-icon_service_right"><?php echo $custom_icon; ?></label>
+										<div class="col-sm-10">
+											<input type="text" name="icon_service_right" value="<?php echo $icon_service_right; ?>" placeholder="<?php echo $custom_icon; ?>" id="input-icon_service_right" class="form-control" />
+											<?php if ($error_icon_service_right) { ?>
+											<div class="text-danger"><?php echo $error_icon_service_right; ?></div>
 											<?php } ?>
 										</div>
 									</div>
@@ -150,6 +170,16 @@
 											<input type="text" name="icon_price" value="<?php echo $icon_price; ?>" placeholder="<?php echo $custom_icon; ?>" id="input-icon_price" class="form-control" />
 											<?php if ($error_icon_price) { ?>
 											<div class="text-danger"><?php echo $error_icon_price; ?></div>
+											<?php } ?>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label" for="input-icon_price_right"><?php echo $custom_icon; ?></label>
+										<div class="col-sm-10">
+											<input type="text" name="icon_price_right" value="<?php echo $icon_price_right; ?>" placeholder="<?php echo $custom_icon; ?>" id="input-icon_price_right" class="form-control" />
+											<?php if ($error_icon_price_right) { ?>
+											<div class="text-danger"><?php echo $error_icon_price_right; ?></div>
 											<?php } ?>
 										</div>
 									</div>
@@ -178,6 +208,15 @@
 										</div>
 									</div>
 									
+									<div class="form-group">
+										<label class="col-sm-2 control-label" for="input-icon_delivery_right"><?php echo $custom_icon; ?></label>
+										<div class="col-sm-10">
+											<input type="text" name="icon_delivery_right" value="<?php echo $icon_delivery_right; ?>" placeholder="<?php echo $custom_icon; ?>" id="input-icon_delivery_right" class="form-control" />
+											<?php if ($error_icon_delivery_right) { ?>
+											<div class="text-danger"><?php echo $error_icon_delivery_right; ?></div>
+											<?php } ?>
+										</div>
+									</div>
 								</div>
 
 							</div>

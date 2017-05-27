@@ -127,6 +127,33 @@ aside {
         color: whitesmoke;
       }
     }
+
+      ul.advantages {
+        padding: 0;
+          p {
+            background-color: $main-color-darken;
+            color: whitesmoke;
+            border-radius: 6px;
+            padding: 10px;
+          }
+        li {
+          text-decoration: none;
+          list-style: none;
+          padding: 0;
+          margin-top: 40px;
+          span {
+            text-align: center;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            color: $main-color;
+            display: inline-block;
+            margin-bottom: 10px;
+            .fa {
+              font-size: 1.3rem;
+            }
+          }
+        }
+    }
     .category {
       margin-top: 110px;
       margin-bottom: 30px;
@@ -166,7 +193,15 @@ aside {
     text-align: center;
   }
   .product-layout {
-    margin-top: 30px;
+    position: relative;
+    margin-top: -40px;
+    &:hover {
+      z-index: 5;
+      .button-group {
+        position: relative;
+        z-index: 5;
+      }
+    }
     >.product-thumb {
       //для того чтобы при наведении элемент не менял размеры
       border: 1px solid transparent;
@@ -175,6 +210,9 @@ aside {
         transform: scale(1.01);
         box-shadow: 8px -2px 38px -1px rgba(228,227,230,1);
         border-radius: 6px;
+        .button-group {
+          transform: scale(1);
+        }
       }
     }
     .caption {
@@ -222,17 +260,21 @@ aside {
     //  padding: 8px;
     //}
     .button-group {
+      transform: scale(0);
+      display: block;
+      bottom: 0;
       padding: 10px;
+      background-color: white;
       button {
         width: 100%;
         height: 43px;
         background-color: transparent;
         border: 1px solid $main-color-darken;
-        color: $main-color;
-        border-radius: 6px;
+        color: $main-color-darken;
+        border-radius: 50px;
         transition: all .3s ease;
         &:hover {
-          background-color: $main-color;
+          background-color: $main-color-darken;
           color: whitesmoke;
         }
       }
@@ -242,14 +284,15 @@ aside {
         height: 43px;
         margin-top: 5px;
         border: 1px solid $main-color-darken;
-        border-radius: 6px;
-        color: $main-color;
+        border-radius: 50px;
+        background-color: transparent;
+        color: $main-color-darken;
         text-align: center;
         padding-top: 10px;
         text-decoration: none;
         transition: all .3s ease;
         &:hover {
-          background-color: $main-color;
+          background-color: $main-color-darken;
           color: whitesmoke;
         }
       }

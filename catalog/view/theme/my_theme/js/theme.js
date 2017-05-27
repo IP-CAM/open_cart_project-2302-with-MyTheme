@@ -12,7 +12,7 @@ $(document).ready(function(){
   //увеличение ширины стандартных айтемов товаров (col-lg-3 -> col-lg-4)
   $('.product-layout > .product-thumb').each(function (current) {
     current += 1;
-    $(this).find('.button-group').append('<a class="button-toclick" href="#current-item-'+ current +'">Купить в один клик</a>');
+    $(this).find('.button-group').append('<a class="button-toclick" href="#current-item-'+ current +'"><span class="click-one">Купить в один клик</span></a>');
     $(this).parent().attr({
       'class': 'product-layout col-lg-4 col-md-4 col-sm-6 col-xs-12'
     });

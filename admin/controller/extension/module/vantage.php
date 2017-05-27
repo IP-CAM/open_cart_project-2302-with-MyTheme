@@ -76,6 +76,12 @@ class ControllerExtensionModuleVantage extends Controller {
 			$data['error_icon_warranty'] = '';
 		}
 
+		if (isset($this->error['icon_warranty_right'])) {
+			$data['error_icon_warranty_right'] = $this->error['icon_warranty_right'];
+		} else {
+			$data['error_icon_warranty_right'] = '';
+		}
+
 		if (isset($this->error['text_service'])) {
 			$data['error_text_service'] = $this->error['text_service'];
 		} else {
@@ -86,6 +92,12 @@ class ControllerExtensionModuleVantage extends Controller {
 			$data['error_icon_service'] = $this->error['icon_service'];
 		} else {
 			$data['error_icon_service'] = '';
+		}
+
+		if (isset($this->error['icon_service_right'])) {
+			$data['error_icon_service_right'] = $this->error['icon_service_right'];
+		} else {
+			$data['error_icon_service_right'] = '';
 		}
 
 		if (isset($this->error['text_price'])) {
@@ -100,6 +112,12 @@ class ControllerExtensionModuleVantage extends Controller {
 			$data['error_icon_price'] = '';
 		}
 
+		if (isset($this->error['icon_price_right'])) {
+			$data['error_icon_price_right'] = $this->error['icon_price_right'];
+		} else {
+			$data['error_icon_price_right'] = '';
+		}
+
 		if (isset($this->error['text_delivery'])) {
 			$data['error_text_delivery'] = $this->error['text_delivery'];
 		} else {
@@ -110,6 +128,13 @@ class ControllerExtensionModuleVantage extends Controller {
 			$data['error_icon_delivery'] = $this->error['icon_delivery'];
 		} else {
 			$data['error_icon_delivery'] = '';
+		}
+
+
+		if (isset($this->error['icon_delivery_right'])) {
+			$data['error_icon_delivery_right'] = $this->error['icon_delivery_right'];
+		} else {
+			$data['error_icon_delivery_right'] = '';
 		}
 
 		
@@ -193,6 +218,14 @@ class ControllerExtensionModuleVantage extends Controller {
 			$data['icon_warranty'] = '';
 		}
 
+		if (isset($this->request->post['icon_warranty_right'])) {
+			$data['icon_warranty_right'] = $this->request->post['icon_warranty_right'];
+		} elseif (!empty($module_info)) {
+			$data['icon_warranty_right'] = $module_info['icon_warranty_right'];
+		} else {
+			$data['icon_warranty_right'] = '';
+		}
+
 		if (isset($this->request->post['text_service'])) {
 			$data['text_service'] = $this->request->post['text_service'];
 		} elseif (!empty($module_info)) {
@@ -209,6 +242,13 @@ class ControllerExtensionModuleVantage extends Controller {
 			$data['icon_service'] = '';
 		}
 
+		if (isset($this->request->post['icon_service_right'])) {
+			$data['icon_service_right'] = $this->request->post['icon_service_right'];
+		} elseif (!empty($module_info)) {
+			$data['icon_service_right'] = $module_info['icon_service_right'];
+		} else {
+			$data['icon_service_right'] = '';
+		}
 		if (isset($this->request->post['text_price'])) {
 			$data['text_price'] = $this->request->post['text_price'];
 		} elseif (!empty($module_info)) {
@@ -225,6 +265,14 @@ class ControllerExtensionModuleVantage extends Controller {
 			$data['icon_price'] = '';
 		}
 
+		if (isset($this->request->post['icon_price_right'])) {
+			$data['icon_price_right'] = $this->request->post['icon_price_right'];
+		} elseif (!empty($module_info)) {
+			$data['icon_price_right'] = $module_info['icon_price_right'];
+		} else {
+			$data['icon_price_right'] = '';
+		}
+
 		if (isset($this->request->post['text_delivery'])) {
 			$data['text_delivery'] = $this->request->post['text_delivery'];
 		} elseif (!empty($module_info)) {
@@ -239,6 +287,15 @@ class ControllerExtensionModuleVantage extends Controller {
 			$data['icon_delivery'] = $module_info['icon_delivery'];
 		} else {
 			$data['icon_delivery'] = '';
+		}
+
+
+		if (isset($this->request->post['icon_delivery_right'])) {
+			$data['icon_delivery_right'] = $this->request->post['icon_delivery_right'];
+		} elseif (!empty($module_info)) {
+			$data['icon_delivery_right'] = $module_info['icon_delivery_right'];
+		} else {
+			$data['icon_delivery_right'] = '';
 		}
 
 		//Prepare for display
@@ -267,12 +324,20 @@ class ControllerExtensionModuleVantage extends Controller {
 			$this->error['icon_warranty'] = $this->language->get('error_icon_warranty');
 		}
 
+		if ((utf8_strlen($this->request->post['icon_warranty_right']) < 2) || (utf8_strlen($this->request->post['icon_warranty_right']) > 32)) {
+			$this->error['icon_warranty_right'] = $this->language->get('error_icon_warranty_right');
+		}
+
 		if ((utf8_strlen($this->request->post['text_service']) < 3) || (utf8_strlen($this->request->post['text_service']) > 128)) {
 			$this->error['text_service'] = $this->language->get('error_text_service');
 		}
 
 		if ((utf8_strlen($this->request->post['icon_service']) < 3) || (utf8_strlen($this->request->post['icon_service']) > 32)) {
 			$this->error['icon_service'] = $this->language->get('error_icon_service');
+		}
+
+		if ((utf8_strlen($this->request->post['icon_service_right']) < 3) || (utf8_strlen($this->request->post['icon_service_right']) > 32)) {
+			$this->error['icon_service_right'] = $this->language->get('error_icon_service_right');
 		}
 
 		if ((utf8_strlen($this->request->post['text_price']) < 3) || (utf8_strlen($this->request->post['text_price']) > 128)) {
@@ -283,12 +348,19 @@ class ControllerExtensionModuleVantage extends Controller {
 			$this->error['icon_price'] = $this->language->get('error_icon_price');
 		}
 
+		if ((utf8_strlen($this->request->post['icon_price_right']) < 3) || (utf8_strlen($this->request->post['icon_price_right']) > 32)) {
+			$this->error['icon_price_right'] = $this->language->get('error_icon_price_right');
+		}
 		if ((utf8_strlen($this->request->post['text_delivery']) < 3) || (utf8_strlen($this->request->post['text_delivery']) > 128)) {
 			$this->error['text_delivery'] = $this->language->get('error_text_delivery');
 		}
 
 		if ((utf8_strlen($this->request->post['icon_delivery']) < 3) || (utf8_strlen($this->request->post['icon_delivery']) > 32)) {
 			$this->error['icon_delivery'] = $this->language->get('error_icon_delivery');
+		}
+
+		if ((utf8_strlen($this->request->post['icon_delivery_right']) < 3) || (utf8_strlen($this->request->post['icon_delivery_right']) > 32)) {
+			$this->error['icon_delivery_right'] = $this->language->get('error_icon_delivery_right');
 		}
 
 		return !$this->error;
