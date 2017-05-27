@@ -1,0 +1,54 @@
+.social_icons_vt_9{
+	height: 50px;
+}
+@media (min-width: 768px) {
+	.social_icons_vt {
+		position: absolute;
+		right: 5px;
+	}
+}
+.social_icons_vt {
+	padding-bottom: 5px;
+}
+.icon_vt {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-image: url(/catalog/view/theme/default/image/social_icons_vt/sprit-social_vt.png);
+}
+.social_facebook_vt {
+	background-position: 0 0;
+}
+.social_facebook_vt:hover {
+	background-position: 0 -40px;
+}
+.social_google_vt {
+	background-position: -40px 0;
+}
+.social_google_vt:hover {
+	background-position: -40px -40px;
+}
+.social_youtube_vt {
+	background-position: -80px 0;
+}
+.social_youtube_vt:hover {
+	background-position: -80px -40px;
+}
+.social_instagram_vt {
+	background-position: -120px 0;
+}
+.social_instagram_vt:hover {
+	background-position: -120px -40px;
+}
+.social_twitter_vt {
+	background-position: -160px 0;
+}
+.social_twitter_vt:hover {
+	background-position: -160px -40px;
+}
+.social_vk_vt {
+	background-position: -200px 0;
+}
+.social_vk_vt:hover {
+	background-position: -200px -40px;
+}

@@ -64,6 +64,18 @@ nav#top {
     ul.nav {
       margin-top: 14px;
       li {
+        background-color: transparent;
+        border: none;
+        &:focus {
+          background-color: #5674b9;
+          border: none;
+          border-radius: 6px;
+        }
+        &:active {
+          background-color: #5674b9;
+          border: none;
+          border-radius: 6px;
+        }
         .active {
           background-color: #5674b9 !important;
           border-radius: 6px;
@@ -107,6 +119,8 @@ aside {
       background-color: #eeeef9;
       margin-top: 3px;
       border-radius: 6px;
+      color: $main-color-darken;
+      border: none;
       transition: all .3s ease;
       &:hover {
         background-color: $main-color;

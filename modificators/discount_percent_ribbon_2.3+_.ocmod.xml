@@ -131,7 +131,7 @@
 	<file path="catalog/view/theme/*/template/product/category.tpl">
 		<operation>
             <search><![CDATA[<div class="caption">]]></search>
-            <add position="before"><![CDATA[<?php if ($product['special']) { ?><div class="ribbon"><span><?php echo $product['percent']; ?></span><span class="sale">SALE</span></div><?php } ?>]]></add>
+            <add position="before"><![CDATA[<?php if ($product['special']) { ?><div class="ribbon"><span><?php echo $product['percent']; ?></div><?php } ?>]]></add>
         </operation>
 	</file>
 	
