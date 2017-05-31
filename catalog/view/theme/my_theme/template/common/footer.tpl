@@ -1,6 +1,8 @@
 <footer>
  <div class="container-fluid">
     <div class="row row-top">
+      <div class="container">
+        <div class="row">
       <?php if ($informations) { ?>
       <div class="col-sm-3">
         <h5><?php echo $text_information; ?></h5>
@@ -56,11 +58,14 @@
           </form>
 
           <div class="success">Спасибо за заявку!</div>
-
+        </div>
+      </div>
         </div>
       </div>
     </div>
    <div class="row row-bottom">
+     <div class="container">
+       <div class="row">
    <div class="col-sm-4 first-col">
     <p><?php echo $powered; ?> <a href="<?php echo $sitemap; ?>"><i class="fa fa-sitemap"></i> <?php echo $text_sitemap; ?></a></p>
    </div>
@@ -74,8 +79,10 @@
      </nav>
    </div>
    <div class="col-sm-4 left-col">
-     UT Development
+     <span>UT Development</span>
    </div>
+   </div>
+     </div>
    </div>
   </div>
 </footer>

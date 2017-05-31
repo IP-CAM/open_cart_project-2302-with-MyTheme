@@ -311,7 +311,7 @@ footer {
     color: #c0c0c0;
     h5 {
       font-size: 2rem;
-      
+      margin-top: 30px;
     }
     ul {
       margin-top: 20px;
@@ -333,7 +333,7 @@ footer {
     }
     h2 {
       font-size: 2rem;
-      margin-top: 10px;
+      margin-top: 30px;
       margin-bottom: 20px;
     }
 
@@ -380,6 +380,43 @@ footer {
   .row-bottom {
     background-color: #131313;
     color: #3cb0fd;
+    .first-col {
+      margin-top: 10px;
+      p {
+        a {
+          color:  #3cb0fd;
+          text-decoration: none;
+          list-style: none;
+          transition: all .3s ease;
+          padding-left: 10px;
+          &:hover {
+            color: whitesmoke;
+          }
+        }
+      }
+    }
+    .nav-social {
+      ul {
+        li {
+          display: inline-block;
+          list-style: none;
+          padding: 10px;
+          a {
+            color:  #3cb0fd;
+            transition: all .3s ease;
+            &:hover {
+              color: whitesmoke;
+            }
+          }
+        }
+      }
+    }
+    .left-col {
+      margin-top: 10px;
+      span {
+        float: right;
+      }
+    }
   }
 }
 
