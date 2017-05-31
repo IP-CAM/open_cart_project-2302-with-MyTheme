@@ -184,9 +184,12 @@ aside {
   }
 }
 #content {
+  .row-sort {
+    margin-bottom: 60px;
+  }
   h3 {
     margin-top: 60px;
-    margin-bottom: 50px;
+    margin-bottom: 110px;
     color: #41535b;
     font-size: 2rem;
     text-transform: uppercase;
@@ -300,6 +303,83 @@ aside {
         display: none;
       }
     }
+  }
+}
+footer {
+  .row-top {
+    background-color: #212121;
+    color: #c0c0c0;
+    h5 {
+      font-size: 2rem;
+      
+    }
+    ul {
+      margin-top: 20px;
+      line-height: 2.4rem;
+      li {
+        a {
+          list-style: none;
+          text-decoration: none;
+          color: #c0c0c0;
+          &:hover {
+            color: #01a0e4;
+          }
+        }
+      }
+    }
+    .site-phone {
+      font-size: 1.6rem;
+      margin-top: 20px;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    form {
+      input {
+        margin-top: 20px;
+      }
+      input[type="text"],textarea {
+        border: none;
+        border-bottom: 1px solid ghostwhite;
+        background-color: transparent !important;
+        font-size: 1.4rem;
+        overflow: hidden;
+        padding: 0;
+        width: 100%;
+        color: navajowhite;
+        &:focus {
+          outline: none !important;
+        }
+        &::placeholder {
+          color: antiquewhite;
+          font-size: 1.4rem;
+        }
+      }
+      button {
+        background-color: transparent;
+        width: 150px;
+        color: #01a0e4;
+        border-color: #01a0e4;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        transition: all .3s ease;
+        &:hover,
+        :focus,
+        :active {
+          background-color: transparent;
+          border-color: whitesmoke;
+          color: whitesmoke;
+        }
+      }
+    }
+  }
+  .row-bottom {
+    background-color: #131313;
+    color: #3cb0fd;
   }
 }
 

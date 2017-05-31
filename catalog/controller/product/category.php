@@ -3,8 +3,6 @@ class ControllerProductCategory extends Controller {
 	public function index() {
 		$this->load->language('product/category');
 
-        $this->load->language('product/product'); //add options
-
 		$this->load->model('catalog/category');
 
 		$this->load->model('catalog/product');
@@ -116,9 +114,6 @@ class ControllerProductCategory extends Controller {
 			$data['button_continue'] = $this->language->get('button_continue');
 			$data['button_list'] = $this->language->get('button_list');
 			$data['button_grid'] = $this->language->get('button_grid');
-
-            $data['text_select'] = $this->language->get('text_select');//add options
-
 			// Set the last category breadcrumb
 			$data['breadcrumbs'][] = array(
 				'text' => $category_info['name'],
@@ -214,77 +209,6 @@ class ControllerProductCategory extends Controller {
 					$rating = false;
 				}
 
-                //add options
-                $json = array();
-
-
-                if (isset($this->request->post['product_id'])) {
-                    $product_id = $this->request->post['product_id'];
-                } else {
-                    $product_id = 0;
-                }
-
-
-                $this->load->model('catalog/product');
-
-
-                $product_info = $this->model_catalog_product->getProduct($product_id);
-
-
-                if ($product_info) {
-
-
-                    $options = array();
-
-
-                    foreach ($this->model_catalog_product->getProductOptions($product_info['product_id']) as $option) {
-                        $product_option_value_data = array();
-
-
-                        foreach ($option['product_option_value'] as $option_value) {
-                            if (!$option_value['subtract'] || ($option_value['quantity'] > 0)) {
-                                if ((($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) && (float)$option_value['price']) {
-                                    $price = $this->currency->format($this->tax->calculate($option_value['price'], $product_info['tax_class_id'], $this->config->get('config_tax') ? 'P' : false));
-                                } else {
-                                    $price = false;
-                                }
-
-
-                                $product_option_value_data[] = array(
-                                    'product_option_value_id' => $option_value['product_option_value_id'],
-                                    'option_value_id' => $option_value['option_value_id'],
-                                    'name' => $option_value['name'],
-                                    'image' => $this->model_tool_image->resize($option_value['image'], 50, 50),
-                                    'price' => $price,
-                                    'price_prefix' => $option_value['price_prefix']
-                                );
-                            }
-                        }
-
-
-                        $options[] = array(
-                            'product_option_id' => $option['product_option_id'],
-                            'option_value' => $product_option_value_data,
-                            'option_id' => $option['option_id'],
-                            'name' => $option['name'],
-                            'type' => $option['type'],
-                            'value' => $option['value'],
-                            'required' => $option['required']
-                        );
-
-
-                        $options['product_id'] = $product_info['product_id'];
-                        $options['name'] = $product_info['name'];
-                    }
-
-
-                    if (!$json) {
-                        $json = $options;
-                    }
-                }
-
-
-
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
@@ -293,7 +217,6 @@ class ControllerProductCategory extends Controller {
 					'price'       => $price,
 					'special'     => $special,
 					'tax'         => $tax,
-                    'options' => $this->model_catalog_product->getProductOptions($result['product_id']), //add options
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
 					'rating'      => $result['rating'],
 					'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)

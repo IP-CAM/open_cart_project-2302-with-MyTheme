@@ -23,4 +23,10 @@ $(document).ready(function(){
       $(this).find('.ribbon').prepend('<span class="stock">SALE</span>');
     } else return;
   })
+  //добавление кастомного класса для правильных отступов
+  if(!window.location.href.indexOf("index.php?route=common/home") > -1) { //находим все старнички кроме главной (где есть сортировка)
+    $("#content > div:nth-of-type(2)").attr({
+      "class" : "row row-sort"
+    });
+  }
 });

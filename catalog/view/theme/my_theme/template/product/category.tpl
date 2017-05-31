@@ -132,31 +132,6 @@
                 <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
                 <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
               </div>
-
-
-              <?php if ($product['options']) { ?>
-              <?php foreach ($product['options'] as $option) { ?>
-              <!-- Код опции, можно взять из product.tpl. Например для Select -->
-              <?php if ($option['type'] == 'select') { ?>
-              <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
-                <label class="control-label" for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></label>
-                <select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id']; ?>" class="form-control">
-                  <option value=""><?php echo $text_select; ?></option>
-                  <?php foreach ($option['product_option_value'] as $option_value) { ?>
-                  <option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
-                    <?php if ($option_value['price']) { ?>
-                    (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
-                    <?php } ?>
-                  </option>
-                  <?php } ?>
-                </select>
-              </div>
-              <?php } ?>
-              <!-- Конец кода опции Select -->
-              <?php } ?>
-              <?php } ?>
-
-
             </div>
           </div>
         </div>
