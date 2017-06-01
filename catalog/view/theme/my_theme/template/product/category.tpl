@@ -126,6 +126,26 @@
                   <?php } ?>
                 </div>
                 <?php } ?>
+
+                <div class="description">
+                  <?php if($product['attribute_groups']) { ?>
+
+                  <?php foreach($product['attribute_groups'] as $attribute_group) { ?>
+                  <!--<thead>
+                  <tr>
+                    <td colspan="2"><?php echo $attribute_group['name']; ?></td>
+                  </tr>
+                  </thead>-->
+                  <ul>
+                    <?php foreach($attribute_group['attribute'] as $attribute) { ?>
+                    <li><?php echo $attribute['name']; ?></li>
+                    <li><?php echo $attribute['text']; ?></li>
+                    <?php } ?>
+                  </ul>
+                  <?php } ?>
+                  <?php } ?>
+                </div>
+
               </div>
               <div class="button-group">
                 <button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>

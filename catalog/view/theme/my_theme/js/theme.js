@@ -29,4 +29,6 @@ $(document).ready(function(){
       "class" : "row row-sort"
     });
   }
+
+  $(".price").css({'height' : ''}).equalHeight();
 });
