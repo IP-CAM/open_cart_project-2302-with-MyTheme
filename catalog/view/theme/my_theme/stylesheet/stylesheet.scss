@@ -1,6 +1,7 @@
 
 @import "vars";
 @import "fonts";
+@import "../libs/mfp-zoom-in.css";
 
 //Custom styles here
 body.common-home {
@@ -198,6 +199,15 @@ aside {
   .product-layout {
     position: relative;
     margin-top: -40px;
+    .product-popup {
+      display: none;
+      background-color: #fff;
+    	max-width: 320px;
+    	position: relative;
+    	margin: auto;
+    	padding: 15px;
+      color: whitesmoke;
+    }
     &:hover {
       z-index: 3;
       .button-group {
@@ -458,6 +468,18 @@ footer {
       span {
         float: right;
       }
+    }
+  }
+}
+.mfp-content {
+  .product-popup {
+    display: block;
+    color: whitesmoke;
+    .price-tax {
+      display: none;
+    }
+    button {
+      color: whitesmoke;
     }
   }
 }
