@@ -46,14 +46,14 @@
 
           <form class="ajax-form">
             <!-- Hidden Required Fields -->
-            <input type="hidden" name="project_name" value="IphoneService">
+            <input type="hidden" name="project_name" value="H-Dress">
             <input type="hidden" name="admin_email" value="<?php echo $email; ?>">
-            <input type="hidden" name="form_subject" value="Заявка с сайта Айфонсервис">
+            <input type="hidden" name="form_subject" value="Заявка с сайта H-Dress">
             <!-- END Hidden Required Fields -->
 
             <input class="form-control" type="text" name="Имя" placeholder="Введите ваше имя..." required>
             <input class="form-control" type="text" name="Телефон" placeholder="Введите ваш телефон..." required>
-            <button class="btn btn-primary">Заказать</button>
+            <button class="btn btn-primary btn-footer">Заказать</button>
 
           </form>
 

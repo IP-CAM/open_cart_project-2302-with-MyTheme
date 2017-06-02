@@ -49,7 +49,27 @@ $(document).ready(function(){
   		mainClass: 'mfp-zoom-in',
   		removalDelay: 400
   	});
-
+    //E-mail Ajax Send
+	$(".ajax-form").submit(function() {
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "catalog/view/theme/my_theme/mail.php",
+			data: th.serialize()
+		}).done(function() {
+			var pp_suc = th.closest('.product-popup').find('.success');
+      var pp_btn = th.closest('.product-popup').find('.btn-footer');
+			pp_suc.fadeIn();
+      pp_btn.hide();
+			setTimeout(function() {
+				th.trigger("reset");
+				pp_suc.hide();
+        pp_btn.show();
+				$.magnificPopup.close();
+			}, 2000);
+		});
+		return false;
+	});
   //добавление элемента "акция" к айтему товара
   $('.product-layout > .product-thumb').each(function () {
     if($(this).find('.price-old').length > 0) {

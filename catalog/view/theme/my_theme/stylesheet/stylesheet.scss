@@ -9,6 +9,18 @@ body.common-home {
 }
 header {
   background-color: $main-color;
+  .dropdown {
+    .dropdown-menu {
+      li {
+        padding: 0;
+        a {
+          display: inline-block;
+          min-width: 160px;
+          padding: 0;
+        }
+      }
+    }
+  }
   .col-sm-4 {
     li {
       display: inline-block;
@@ -105,11 +117,18 @@ nav#top {
     }
   }
 }
+#pos-slider {
+  img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
 .owl-wrapper-outer {
   border: none;
   box-shadow: none;
   border-radius: 0;
 }
+
 .owl-prev,
 .owl-next {
   color: #01a0e4;
@@ -331,6 +350,9 @@ aside {
           color: whitesmoke;
           border-color: $main-color-darken;
         }
+        &:focus,:active {
+          outline: none;
+        }
       }
       .button-toclick {
         display: block;
@@ -345,6 +367,9 @@ aside {
         padding-top: 10px;
         text-decoration: none;
         transition: all .3s ease;
+        &:focus {
+          outline: none;
+        }
         &:hover {
           background-color: $main-color-darken;
           color: whitesmoke;
@@ -404,6 +429,7 @@ footer {
         color: navajowhite;
         &:focus {
           outline: none !important;
+          box-shadow: none !important;
         }
         &::placeholder {
           color: antiquewhite;
@@ -419,14 +445,30 @@ footer {
         margin-bottom: 20px;
         border-radius: 20px;
         transition: all .3s ease;
-        &:hover,
-        :focus,
-        :active {
+        &:hover
+         {
           background-color: transparent;
           border-color: whitesmoke;
           color: whitesmoke;
         }
+        &:active,
+        &:focus {
+          outline: none !important;
+        }
       }
+    }
+    .success {
+      border: 3px solid rgb(80, 185, 45);
+      margin-top: 30px;
+      margin-bottom: 20px;
+      border-radius: 50px;
+      color: rgb(80, 185, 45);
+      width: 150px;
+      height: 35px;
+      box-sizing: border-box;
+      padding-top: 4px;
+      text-align: center;
+      display: none;
     }
   }
   .row-bottom {
@@ -472,14 +514,94 @@ footer {
   }
 }
 .mfp-content {
+  img{
+    width: 100%;
+  }
   .product-popup {
-    display: block;
+    max-width: 350px;
+  	position: relative;
+  	margin: auto;
+  	padding: 15px;
     color: whitesmoke;
+    .success {
+      position: absolute;
+      z-index: 1;
+      color: rgb(118, 38, 246);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 80% 10% 10%;
+      display: none;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+    }
+    p,h3 {
+      text-align: center;
+    }
+    form {
+      input {
+        margin-top: 20px;
+      }
+      input[type="text"],textarea {
+        border: none;
+        border-bottom: 1px solid ghostwhite;
+        background-color: transparent !important;
+        font-size: 1.4rem;
+        overflow: hidden;
+        padding: 0;
+        width: 100%;
+        color: navajowhite;
+        &:focus {
+          outline: none !important;
+          box-shadow: none !important;
+        }
+        &:active {
+          outline: none !important;
+        }
+        &::placeholder {
+          color: antiquewhite;
+          font-size: 1.4rem;
+        }
+      }
+      button {
+        background-color: transparent;
+        width: 150px;
+        color: #01a0e4;
+        border-color: #01a0e4;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        transition: all .3s ease;
+        &:hover
+         {
+          background-color: transparent;
+          border-color: whitesmoke;
+          color: whitesmoke;
+        }
+        &:active,
+        &:focus {
+          outline: none !important;
+        }
+
+      }
+    }
     .price-tax {
       display: none;
     }
+    .price-old {
+      text-decoration: line-through;
+    }
+    .price-new {
+      font-size: 2rem;
+    }
     button {
-      color: whitesmoke;
+      color: rgb(118, 38, 246);
     }
   }
 }
