@@ -310,6 +310,7 @@ aside {
       background-color: red;
       padding: 10px;
       opacity: 0.8;
+      border-radius: 6px;
       span {
         display: block;
         font-size: 14px;
@@ -422,11 +423,11 @@ footer {
         border: none;
         border-bottom: 1px solid ghostwhite;
         background-color: transparent !important;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         overflow: hidden;
         padding: 0;
         width: 100%;
-        color: navajowhite;
+        color: whitesmoke;
         &:focus {
           outline: none !important;
           box-shadow: none !important;
@@ -516,6 +517,13 @@ footer {
 .mfp-content {
   img{
     width: 100%;
+    padding: 0;
+    border-radius: 6px;
+  }
+  .current-content {
+    background-color: $main-color;
+    margin-top: -10px;
+    border-radius: 6px;
   }
   .product-popup {
     max-width: 350px;
@@ -543,23 +551,32 @@ footer {
     }
     p,h3 {
       text-align: center;
+      padding-top: 8px;
     }
     form {
+      ::placeholder {
+        color: $main-color;
+        padding-left: 10px;
+      }
       input {
-        margin-top: 20px;
+        height: 40px;
+        margin-top: 10px;
       }
       input[type="text"],textarea {
         border: none;
-        border-bottom: 1px solid ghostwhite;
-        background-color: transparent !important;
-        font-size: 1.4rem;
+        background-color: #6b7dc8 !important;
+        font-size: 1.6rem;
         overflow: hidden;
         padding: 0;
-        width: 100%;
-        color: navajowhite;
+        width: 90%;
+        position: relative;
+        left: 5%;
+        color: whitesmoke;
+        transition: all .3s ease;
         &:focus {
           outline: none !important;
           box-shadow: none !important;
+          background-color: rgb(75, 94, 196) !important;
         }
         &:active {
           outline: none !important;
@@ -570,18 +587,19 @@ footer {
         }
       }
       button {
-        background-color: transparent;
+        background-color: #6b7dc8;
         width: 150px;
-        color: #01a0e4;
-        border-color: #01a0e4;
+        color: whitesmoke;
+        border-color: #6b7dc8;
         margin-top: 30px;
         margin-bottom: 20px;
-        border-radius: 20px;
+        margin-left: 15px;
+        border-radius: 6px;
         transition: all .3s ease;
         &:hover
          {
-          background-color: transparent;
-          border-color: whitesmoke;
+          background-color: rgb(75, 94, 196);
+          border-color: rgb(75, 94, 196);
           color: whitesmoke;
         }
         &:active,
@@ -600,10 +618,36 @@ footer {
     .price-new {
       font-size: 2rem;
     }
-    button {
+    .mfp-close {
       color: rgb(118, 38, 246);
+      position: absolute;
+      right: -20px;
+      color: whitesmoke;
     }
   }
+}
+
+//страница категорий
+.category-name,
+.refine {
+  display: inline-block;
+  padding-left: 10px;
+  margin-top: 45px;
+  strong {
+    font-size: 1.6rem;
+  }
+  a {
+    color: rgb(73, 73, 73);
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: all .3s ease;
+    &:hover {
+      color: rgb(54, 98, 255);
+    }
+  }
+}
+.input-group-sm {
+  margin-top: 45px;
 }
 
 @import "media";

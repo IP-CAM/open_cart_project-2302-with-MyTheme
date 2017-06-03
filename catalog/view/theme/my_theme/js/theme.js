@@ -20,7 +20,6 @@ $(document).ready(function(){
 
 		$(this).after('\
 		<div id="current-item-' + current + '" class="product-popup">\
-			<h2>Купить в один клик</h2>\
 			<div class="current-img-wrap"><img src="' + img_url + '" alt="Одежда"></div>\
 			<div class="current-content">\
 				<h3>' + item_name + '</h3>\
@@ -35,7 +34,7 @@ $(document).ready(function(){
           <input class="form-control" type="text" name="Размер" placeholder="Укажите ваш размер..." required>\
 	         <button class="btn btn-primary">Заказать</button>\
 				</form>\
-				<div class="success">Спасибо за заявку!</div>\
+				<div class="success"><p>Спасибо за заявку!</p><p>Наш менеджер свяжется с Вами в течении 10 минут</p></div>\
 			</div>\
 		</div>');
 
@@ -44,6 +43,7 @@ $(document).ready(function(){
       'class': 'product-layout col-lg-4 col-md-4 col-sm-6 col-xs-12'
     });
   })
+
 
   $('.button-toclick').magnificPopup({
   		mainClass: 'mfp-zoom-in',
@@ -66,7 +66,7 @@ $(document).ready(function(){
 				pp_suc.hide();
         pp_btn.show();
 				$.magnificPopup.close();
-			}, 2000);
+			}, 2600);
 		});
 		return false;
 	});
@@ -78,7 +78,7 @@ $(document).ready(function(){
   })
   //добавление кастомного класса для правильных отступов
   if(!window.location.href.indexOf("index.php?route=common/home") > -1) { //находим все старнички кроме главной (где есть сортировка)
-    $("#content > div:nth-of-type(2)").attr({
+    $("#content > div:nth-of-type(1)").attr({
       "class" : "row row-sort"
     });
   }

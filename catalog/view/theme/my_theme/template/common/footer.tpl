@@ -33,6 +33,7 @@
           <div class="site-phone"><?php echo $telephone; ?></div>
       </div>
       <div class="col-sm-4">
+      
         <h2>Заказать звонок</h2>
         <!--<h5><?php echo $text_account; ?></h5>
         <ul class="list-unstyled">
