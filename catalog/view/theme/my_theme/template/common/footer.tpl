@@ -10,6 +10,7 @@
           <?php foreach ($informations as $information) { ?>
           <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
           <?php } ?>
+          <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
         </ul>
       </div>
       <?php } ?>
@@ -33,7 +34,7 @@
           <div class="site-phone"><?php echo $telephone; ?></div>
       </div>
       <div class="col-sm-4">
-      
+
         <h2>Заказать звонок</h2>
         <!--<h5><?php echo $text_account; ?></h5>
         <ul class="list-unstyled">

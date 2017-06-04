@@ -83,5 +83,5 @@ $(document).ready(function(){
     });
   }
 
-  $(".price").css({'height' : ''}).equalHeight();
+  $(".caption").css({'height' : ''}).equalHeight();
 });

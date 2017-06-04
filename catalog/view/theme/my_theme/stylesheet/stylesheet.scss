@@ -247,7 +247,14 @@ aside {
         .caption {
           color: whitesmoke;
           a {
-            color: whitesmoke;
+            color: rgb(8, 120, 193);
+            text-decoration: underline;
+            &:hover {
+              color: whitesmoke;
+            }
+          }
+          .rating {
+            display: block;
           }
         }
         &::before {
@@ -269,10 +276,21 @@ aside {
         background-color: #0f0f1b;
       }
     }
+    .product-thumb {
+      position: relative;
+    }
     .caption {
       text-align: center;
       position: relative;
       z-index: 2;
+      .rating {
+        color: whitesmoke;
+        font-size: 1rem;
+        position: absolute;
+        bottom: 160%;
+        right: 30%;
+        display: none;
+      }
       p {
         display: none;
         .price-tax {
@@ -649,5 +667,9 @@ footer {
 .input-group-sm {
   margin-top: 45px;
 }
-
+//страница товара
+#map {
+  max-width: 100%;
+  min-height: 450px;
+}
 @import "media";

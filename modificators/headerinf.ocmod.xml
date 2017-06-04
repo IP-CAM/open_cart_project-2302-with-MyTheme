@@ -12,6 +12,7 @@
 			]]></search>
 			<add position="after"><![CDATA[
 				$data['text_information'] = $this->language->get('text_information');
+				$data['text_manufacturer'] = $this->language->get('text_manufacturer');
 				$this->load->model('catalog/information');
 				$data['informations'] = array();
 				foreach ($this->model_catalog_information->getInformations() as $result) {
@@ -23,7 +24,8 @@
 					}
 				}
 				$data['contact'] = $this->url->link('information/contact');
+				$data['manufacturer'] = $this->url->link('product/manufacturer');
 			]]></add>
 		</operation>
-	</file>  
+	</file>
 </modification>
