@@ -93,6 +93,13 @@
                   <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
                  <li><a href="/rasprodazha">Скидки</a></li>
                  <li><a href="<?php echo $contact; ?>">Контакты</a></li>
+                 <!-- добавление блога на vue js  -->
+                 <li id="app">
+                   <router-link to='/blog'>Блог</router-link>
+                   <router-view></router-view>
+                   <script src="catalog/view/theme/my_theme/js/build.js">
+                   </script>
+                 </li>
                </ul>
             </div>
           <?php } ?>

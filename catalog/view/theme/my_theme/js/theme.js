@@ -9,6 +9,7 @@ $(document).ready(function(){
       $(this).addClass("active");
     }
   });
+
   //увеличение ширины стандартных айтемов товаров (col-lg-3 -> col-lg-4)
   $('.product-layout > .product-thumb').each(function (current) {
     current += 1;
