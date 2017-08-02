@@ -85,22 +85,21 @@
             <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
           </div>
           <div class="collapse navbar-collapse navbar-ex1-collapse">
-              <?php if ($informations) { ?>
-               <ul class="nav navbar-nav">
-                  <?php foreach ($informations as $information) { ?>
-                  <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
-                  <?php } ?>
-                  <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
-                 <li><a href="/rasprodazha">Скидки</a></li>
-                 <li><a href="<?php echo $contact; ?>">Контакты</a></li>
-                 <!-- добавление блога на vue js  -->
-                 <li id="app">
-                   <router-link to='/blog'>Блог</router-link>
-                   <router-view></router-view>
-                   <script src="catalog/view/theme/my_theme/js/build.js">
-                   </script>
-                 </li>
-               </ul>
+            <div id="app">
+                <?php if ($informations) { ?>
+                 <ul class="nav navbar-nav">
+                    <?php foreach ($informations as $information) { ?>
+                    <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
+                    <?php } ?>
+                    <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
+                   <li><a href="/rasprodazha">Скидки</a></li>
+                   <li><a href="<?php echo $contact; ?>">Контакты</a></li>
+                   <!-- добавление блога на vue js  -->
+                   <li><router-link to='/blog'>+Блог</router-link></li>
+                 </ul>
+                 <router-view></router-view>
+                 <script src="catalog/view/theme/my_theme/js/build.js" type="text/javascript"></script>
+             </div>
             </div>
           <?php } ?>
           </div>
